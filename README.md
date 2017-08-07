@@ -4,6 +4,11 @@
 Prometheus metric samples data type and provides several storage formats
 for storing Prometheus data. 
 
+Related packages to install:
+- [Prometheus remote storage adaptor](https://github.com/timescale/prometheus-postgresql-adapter) (required)
+- [TimescaleDB](https://github.com/timescale/timescaledb) (optional
+for better performance and scalability)
+
 ## Running from Docker
 
 A PostgreSQL docker image with both pg_prometheus and TimescaleDB installed is
@@ -37,7 +42,7 @@ CREATE EXTENSION pg_prometheus;
 ##  Integrating with Prometheus
 
 For quickly connecting Prometheus to pg_prometheus simply 
-connect the [Prometheus PostgreSQL adapter](https://github.com/prometheus-adapter) to a
+connect the [Prometheus PostgreSQL adapter](https://github.com/timescale/prometheus-postgresql-adapter) to a
 database that has pg_prometheus installed.
 
 For more technical details, or to use pg_prometheus without Prometheus, read below.
